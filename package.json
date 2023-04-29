@@ -1,5 +1,5 @@
 {
-  "name": "TestingTsc",
+  "name": "simple-decor",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -7,7 +7,7 @@
     "main": "tsc && node dist/main.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lucas Descause",
   "license": "ISC",
   "dependencies": {
     "class-transformer": "^0.5.1",
