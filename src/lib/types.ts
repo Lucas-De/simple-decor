@@ -14,6 +14,6 @@ export class Context {
   body: Record<string | number, unknown>;
 }
 
-export type ValidatorClass = { new (...args: any[]): any };
+export type Class = { new (...args: any[]): any };
 
 export type ControllerFunction = (req: Request) => Record<string, unknown>;

@@ -1,17 +1,24 @@
 import { Request, Response } from "express";
 import { router } from "./lib";
 import { HttpMethod } from "./types";
+import { documentEndpoint } from "./docBuilder";
+import "reflect-metadata";
 
-export function Endpoint(httpMethod: HttpMethod, endpoint: string): any {
+export function Endpoint(httpMethod: HttpMethod, path: string): any {
   return function (
-    _target: any,
-    _propertyKey: string,
+    target: any,
+    propertyKey: string,
     descriptor: PropertyDescriptor
   ): PropertyDescriptor {
-    router[httpMethod](endpoint, async (req: Request, res: Response) => {
-      const response = await descriptor.value(req);
-      res.json(response);
-    });
+    const returnType = Reflect.getMetadata(
+      "controller:response-body",
+      target,
+      propertyKey
+    );
+    console.log({ returnType });
+    documentEndpoint(httpMethod, path, returnType);
+
+    router[httpMethod](path, descriptor.value);
 
     return descriptor;
   };
