@@ -9,6 +9,8 @@
     "strictPropertyInitialization": false,
     "outDir": "dist",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata":true
-  }
+    "emitDecoratorMetadata": true,
+    "declaration": true
+  },
+  "exclude": ["node_modules", "dist"]
 }
