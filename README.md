@@ -1,9 +1,9 @@
 # simple-decor
 ## Purpose
-Modern REST API frameworks allow simple syntax to register new routes and type check their dto. 
+Modern REST API frameworks allow simple syntax to register new routes and type check their data transfer object (DTO). 
 In [express](https://www.npmjs.com/package/express), these processes can be verbose, but migrating to newer frameworks is not always an option. 
 
-The goal of simple-decor is to bring in uncomplicated decorator-based route registration and data transfer object (DTO) type checking to Express projects. Additionally, it plans to include automatic OpenAPI documentation generation in upcoming versions.
+The goal of simple-decor is to bring in uncomplicated decorator-based route registration and DTO type checking to Express projects. Additionally, it plans to include automatic OpenAPI documentation generation in upcoming versions.
 
 ## Installation
 
