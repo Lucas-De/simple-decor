@@ -1,9 +1,10 @@
 {
   "name": "simple-decor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/lib.js",
   "types": "dist/lib.d.ts",
+  "homepage": "https://github.com/Lucas-De/simple-decor",
   "scripts": {
     "build": "tsc"
   },
